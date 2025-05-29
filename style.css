@@ -10,12 +10,12 @@ body {
 
 .welcome-page {
     height: 100vh;
-    background-image: url("https://picsum.photos/id/684/600/400");
+    background: linear-gradient(rgb(76, 75, 75, 0.7), rgba(76, 75, 75, 0.1), rgba(76, 75, 75, 0.6)),
+                url("https://picsum.photos/id/684/600/400");
     background-size: cover;
     background-position: center;
     color: white;
     position: relative;
-    opacity: 0.5;
 }
 
 .welcome-page.d-none {
@@ -100,7 +100,7 @@ body {
 
 .hero-section {
     height: 80vh;
-    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23DEB887" width="1200" height="600"/><ellipse fill="%234A4A4A" cx="600" cy="300" rx="400" ry="200" opacity="0.2"/></svg>');
     background-size: cover;
     background-position: center;
