@@ -16,6 +16,7 @@ window.addEventListener("scroll", function () {
     }
 });
 
+
 // 點選主頁選單首頁會重整主頁
 document.getElementById('homePage').addEventListener('click', (e) => {
     e.preventDefault();

@@ -118,6 +118,10 @@ const desktop_productHTML = `
                     <span class="carousel-control-next-icon"></span>
                 </button>
             </div>
+
+            <div class="row buy_now">
+                <button class="btn text-white py-3 text-end"><a href="product.html">立即購買</a></button>
+            </div>
         </div>
     </section>
     `;

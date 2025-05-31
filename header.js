@@ -13,16 +13,19 @@ const headerHTML = `
 
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
-                <li class="nav-item">
+                <li class="nav-item px-1">
                     <a class="nav-link" id="homePage" href="">首頁</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-1">
+                    <a class="nav-link" href="news.html" target="_self">最新消息</a>
+                </li>
+                <li class="nav-item px-1">
                     <a class="nav-link" href="info.html" target="_self">關於我們</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="product.html" target="_self">產品</a>
+                <li class="nav-item px-1">
+                    <a class="nav-link" href="product.html" target="_self">精選商品</a>
                 </li>
-                <li class="nav-item">
+                <li class="nav-item px-1">
                     <a class="nav-link" href="contact.html" target="_self">聯絡資訊</a>
                 </li>
             </ul>
