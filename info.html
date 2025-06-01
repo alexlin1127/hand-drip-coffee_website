@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>關於我們 - DEMENT 咖啡</title>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet" />
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+        <link
+            href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
+            rel="stylesheet" />
+        <link rel="stylesheet" href="style.css">
+        <style>
+            :root {
+                --coffee-dark: #3c2415;
+                --coffee-medium: #8b4513;
+                --coffee-light: #d2b48c;
+                --yellow-accent: #f4d03f;
+                --yellow-light: #fcf3cf;
+                --white: #ffffff;
+                --cream: #fff8dc;
+            }
+
+            body {
+                font-family: "Microsoft JhengHei", Arial, sans-serif;
+                background-color: var(--cream);
+                color: var(--coffee-dark);
+            }
+
+            .brand-story {
+                padding-top: 30px;
+            }
+            /* Hero Section, */
+            .hero-section {
+                background: linear-gradient(135deg, var(--coffee-medium) 0%, var(--coffee-dark) 100%);
+                color: var(--white);
+                padding: 125px 0;
+                position: relative;
+                overflow: hidden;
+                height: 43vh;
+            }
+
+            .hero-section::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(244,208,63,0.1)"/></svg>')
+                    repeat;
+                opacity: 0.3;
+            }
+
+            .hero-content {
+                position: relative;
+                z-index: 2;
+            }
+
+            .hero-title {
+                font-size: 3.5rem;
+                font-weight: 700;
+                margin-bottom: 1.5rem;
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            }
+
+            .hero-subtitle {
+                font-size: 1.3rem;
+                opacity: 0.9;
+                max-width: 600px;
+                margin: 0 auto;
+                padding-top: 15px;
+            }
+
+            /* Section Styling */
+            .content-section {
+                padding: 50px 0;
+            }
+
+            .section-title {
+                font-size: 2.5rem;
+                font-weight: 700;
+                color: var(--coffee-dark);
+                text-align: center;
+                margin-bottom: 3rem;
+                position: relative;
+                padding: 10px 0px;
+            }
+
+            .section-title::after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 4px;
+                background: linear-gradient(90deg, var(--yellow-accent), var(--coffee-medium));
+                border-radius: 2px;
+            }
+
+            /* Brand Story Section */
+            .brand-story {
+                background: var(--white);
+            }
+
+            .story-card {
+                background: var(--yellow-light);
+                border-radius: 20px;
+                padding: 2.5rem;
+                margin-bottom: 2rem;
+                box-shadow: 0 10px 30px rgba(60, 36, 21, 0.1);
+                transition: transform 0.3s ease, box-shadow 0.3s ease;
+            }
+
+            .story-card:hover {
+                transform: translateY(-5px);
+                box-shadow: 0 20px 40px rgba(60, 36, 21, 0.15);
+            }
+
+            .story-icon {
+                font-size: 3rem;
+                color: var(--coffee-medium);
+                margin-bottom: 1.5rem;
+            }
+
+            .story-title {
+                font-size: 1.5rem;
+                font-weight: 600;
+                color: var(--coffee-dark);
+                margin-bottom: 1rem;
+            }
+
+            .story-text {
+                font-size: 1.1rem;
+                line-height: 1.7;
+                color: var(--coffee-dark);
+            }
+
+            /* Coffee Origin Section */
+            .coffee-origin {
+                background: linear-gradient(135deg, var(--coffee-light) 0%, var(--yellow-light) 100%);
+            }
+
+            .origin-card {
+                background: var(--white);
+                border-radius: 15px;
+                overflow: hidden;
+                box-shadow: 0 10px 25px rgba(60, 36, 21, 0.1);
+                transition: transform 0.3s ease;
+                height: 100%;
+            }
+
+            .origin-card:hover {
+                transform: translateY(-8px);
+            }
+
+            .origin-image {
+                width: 100%;
+                height: 250px;
+                background: linear-gradient(45deg, var(--coffee-medium), var(--coffee-light));
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                font-size: 4rem;
+                color: var(--white);
+            }
+
+            .origin-content {
+                padding: 2rem;
+            }
+
+            .origin-title {
+                font-size: 1.4rem;
+                font-weight: 600;
+                color: var(--coffee-dark);
+                margin-bottom: 1rem;
+            }
+
+            .origin-description {
+                color: var(--coffee-dark);
+                line-height: 1.6;
+                margin-bottom: 1rem;
+            }
+
+            .origin-highlight {
+                background: var(--yellow-light);
+                padding: 0.8rem 1.2rem;
+                border-radius: 8px;
+                border-left: 4px solid var(--yellow-accent);
+                font-weight: 500;
+            }
+
+            /* Sustainability Section */
+            .sustainability {
+                background: var(--white);
+            }
+
+            .sustainability-grid {
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+                gap: 2rem;
+                margin-top: 3rem;
+            }
+
+            .sustainability-item {
+                text-align: center;
+                padding: 2rem;
+                background: var(--cream);
+                border-radius: 15px;
+                border: 3px solid transparent;
+                transition: all 0.3s ease;
+            }
+
+            .sustainability-item:hover {
+                border-color: var(--yellow-accent);
+                transform: translateY(-5px);
+            }
+
+            .sustainability-icon {
+                font-size: 3.5rem;
+                color: var(--coffee-medium);
+                margin-bottom: 1.5rem;
+            }
+
+            .sustainability-title {
+                font-size: 1.3rem;
+                font-weight: 600;
+                color: var(--coffee-dark);
+                margin-bottom: 1rem;
+            }
+
+            .sustainability-text {
+                color: var(--coffee-dark);
+                line-height: 1.6;
+            }
+
+            /* Values Section */
+            .values-section {
+                background: var(--coffee-dark);
+                color: var(--white);
+                text-align: center;
+                padding: 60px 0;
+            }
+
+            .values-title {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                color: var(--yellow-accent);
+            }
+
+            .values-text {
+                font-size: 1.2rem;
+                max-width: 800px;
+                margin: 0 auto;
+                line-height: 1.7;
+            }
+
+            /* Responsive Design */
+            @media (max-width: 768px) {
+                .hero-title {
+                    font-size: 2.5rem;
+                }
+
+                .section-title {
+                    font-size: 2rem;
+                }
+
+                .story-card {
+                    padding: 1.5rem;
+                }
+
+                .content-section {
+                    padding: 50px 0;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <nav id="head-area" class="navbar navbar-expand-lg navbar-custom fixed-top"></nav>
+
+        <main>
+            <!-- Hero Section -->
+            <section class="hero-section">
+                <div class="container">
+                    <div class="hero-content text-center">
+                        <h1 class="hero-title">關於 DEMENT</h1>
+                        <p class="hero-subtitle">
+                            從一顆咖啡豆開始，我們致力於為您帶來最純粹的咖啡體驗，並為世界創造更美好的未來
+                        </p>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Brand Story Section -->
+            <section class="content-section brand-story">
+                <div class="container">
+                    <h2 class="section-title">品牌理念與故事</h2>
+                    <div class="row brand-story">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="story-card text-center">
+                                <div class="story-icon">
+                                    <i class="fas fa-heart"></i>
+                                </div>
+                                <h3 class="story-title">熱情初心</h3>
+                                <p class="story-text">
+                                    DEMENT
+                                    始於對咖啡的純粹熱愛。我們相信每一杯咖啡都承載著農民的辛勤、土地的恩賜，以及品嚐者的期待。這份初心驅使我們不斷追求完美。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="story-card text-center">
+                                <div class="story-icon">
+                                    <i class="fas fa-gem"></i>
+                                </div>
+                                <h3 class="story-title">品質堅持</h3>
+                                <p class="story-text">
+                                    從豆子的挑選到烘焙的每一個環節，我們都堅持最高標準。專業的杯測師與烘焙師團隊，確保每一批咖啡都能展現其獨特的風味特色。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="story-card text-center">
+                                <div class="story-icon">
+                                    <i class="fas fa-users"></i>
+                                </div>
+                                <h3 class="story-title">社群連結</h3>
+                                <p class="story-text">
+                                    咖啡不只是飲品，更是連結人心的橋樑。我們致力於建立一個溫暖的咖啡社群，讓每個人都能在這裡找到屬於自己的咖啡故事。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Coffee Origin Section -->
+            <section class="content-section coffee-origin">
+                <div class="container">
+                    <h2 class="section-title">咖啡豆的故鄉</h2>
+                    <div class="row">
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="origin-card">
+                                <div class="origin-image">
+                                    <i class="fas fa-mountain"></i>
+                                </div>
+                                <div class="origin-content">
+                                    <h3 class="origin-title">衣索比亞 - 咖啡的發源地</h3>
+                                    <p class="origin-description">
+                                        來自海拔2000公尺的高山咖啡園，這裡的咖啡豆擁有獨特的花香與果酸，是咖啡愛好者心中的聖地。
+                                    </p>
+                                    <div class="origin-highlight">風味特色：花香、柑橘酸質、蜂蜜甜感</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="origin-card">
+                                <div class="origin-image">
+                                    <i class="fas fa-leaf"></i>
+                                </div>
+                                <div class="origin-content">
+                                    <h3 class="origin-title">哥倫比亞 - 安地斯山脈</h3>
+                                    <p class="origin-description">
+                                        得天獨厚的地理環境造就了哥倫比亞咖啡的均衡口感，溫和的酸質配上豐富的堅果香氣。
+                                    </p>
+                                    <div class="origin-highlight">風味特色：堅果香、焦糖甜、溫和酸質</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-lg-4 col-md-6 mb-4">
+                            <div class="origin-card">
+                                <div class="origin-image">
+                                    <i class="fas fa-sun"></i>
+                                </div>
+                                <div class="origin-content">
+                                    <h3 class="origin-title">瓜地馬拉 - 火山土壤</h3>
+                                    <p class="origin-description">
+                                        火山土壤賦予了瓜地馬拉咖啡豐富的礦物質，創造出層次豐富且回甘悠長的風味體驗。
+                                    </p>
+                                    <div class="origin-highlight">風味特色：煙燻味、巧克力、香料香氣</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Sustainability Section -->
+            <section class="content-section sustainability">
+                <div class="container">
+                    <h2 class="section-title">永續與社會責任</h2>
+                    <div class="row">
+                        <div class="col-lg-6 mb-4">
+                            <div class="sustainability-item">
+                                <div class="sustainability-icon">
+                                    <i class="fas fa-handshake"></i>
+                                </div>
+                                <h3 class="sustainability-title">公平貿易承諾</h3>
+                                <p class="sustainability-text">
+                                    我們與咖啡農直接合作，確保他們獲得公平的收購價格，改善生活品質，並投資於農場的永續發展。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="sustainability-item">
+                                <div class="sustainability-icon">
+                                    <i class="fas fa-seedling"></i>
+                                </div>
+                                <h3 class="sustainability-title">環境保護</h3>
+                                <p class="sustainability-text">
+                                    採用有機種植方式，減少化學肥料使用，保護土壤健康，並推動森林保育計畫，維護生物多樣性。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="sustainability-item">
+                                <div class="sustainability-icon">
+                                    <i class="fas fa-recycle"></i>
+                                </div>
+                                <h3 class="sustainability-title">包裝永續</h3>
+                                <p class="sustainability-text">
+                                    使用可回收與生物降解的包裝材料，減少塑膠使用量，並推動循環經濟概念。
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-lg-6 mb-4">
+                            <div class="sustainability-item">
+                                <div class="sustainability-icon">
+                                    <i class="fas fa-graduation-cap"></i>
+                                </div>
+                                <h3 class="sustainability-title">教育支持</h3>
+                                <p class="sustainability-text">
+                                    投資咖啡產區的教育資源，支持當地兒童教育，並提供農民技術培訓與知識分享。
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Values Section -->
+            <section class="values-section">
+                <div class="container">
+                    <h2 class="values-title">我們的承諾</h2>
+                    <p class="values-text">
+                        每一杯 DEMENT 咖啡，都承載著我們對品質的堅持、對環境的關愛、對社會的責任。
+                        我們不只是在銷售咖啡，更是在分享一種生活態度 ——
+                        在快節奏的生活中，找到那份純粹與美好，讓每一個平凡的時刻都變得特別。
+                    </p>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer-area" class="footer py-4"></footer>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+        <script src="header.js"></script>
+        <script src="style.js"></script>
+        <script src="footer.js"></script>
+    </body>
+</html>
