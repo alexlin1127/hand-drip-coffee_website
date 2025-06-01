@@ -1,9 +1,9 @@
 // 動態切換封面和主頁
-function enterMainSite() {
-    document.getElementById("welcomePage").classList.add("d-none");
-    document.getElementById("mainSite").classList.add("active");
-    window.scrollTo({ top: 0, behavior: "smooth" });
-}
+// function enterMainSite() {
+//     document.getElementById("welcomePage").classList.add("d-none");
+//     document.getElementById("mainSite").classList.add("active");
+//     window.scrollTo({ top: 0, behavior: "smooth" });
+// }
 
 
 // 動態調整當視窗滑動時navbar的透明度
@@ -18,7 +18,11 @@ window.addEventListener("scroll", function () {
 
 
 // 點選主頁選單首頁會重整主頁
-document.getElementById('homePage').addEventListener('click', (e) => {
-    e.preventDefault();
-    enterMainSite();
-})
+// document.getElementById('homePage').addEventListener('click', () => {
+//     // e.preventDefault();
+//     // enterMainSite();
+//     document.getElementById("welcomePage").style.display = 'none';
+//     document.getElementById("mainSite").style.display = 'block';
+//     location.reload();
+// })
+

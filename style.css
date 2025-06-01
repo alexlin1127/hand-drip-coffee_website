@@ -19,15 +19,15 @@ body {
     position: relative;
 }
 
-.welcome-page.d-none {
+/* .welcome-page.d-none {
     display: none;
-}
+} */
 
-.welcome-header {
+/* .welcome-header {
     position: absolute;
     top: 20px;
     left: 20px;
-}
+} */
 
 .logo-circle {
     width: 40px;
@@ -71,14 +71,14 @@ body {
 }
 
 .main-site {
-    display: none;
-    height: 100%;
-}
-
-.main-site.active {
     display: block;
     height: 100%;
 }
+
+/* .main-site.active {
+    display: block;
+    height: 100%;
+} */
 
 .navbar-custom {
     background: rgba(0, 0, 0, 0.9);
