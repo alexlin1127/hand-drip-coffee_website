@@ -10,11 +10,11 @@ const footerHTML = `
                 <h5>台北市大安區咖啡街123號</h5>
             </div>
 
-            <!-- 電話 -->
+            <!-- 聯絡電話 -->
             <div class="col-md-4 d-flex flex-column align-items-center">
                 <div class="d-flex align-items-center gap-3">
                     <i class="bi bi-telephone display-6 text-primary-custom py-3"></i>
-                    <h4 class="mb-1">電話</h4>
+                    <h4 class="mb-1">聯絡電話</h4>
                 </div>
                 <h5>(02) 1234-5678</h5>
             </div>

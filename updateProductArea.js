@@ -120,7 +120,7 @@ const desktop_productHTML = `
             </div>
 
             <div class="row buy_now">
-                <button class="btn text-white py-3 text-end"><a href="product.html">立即購買</a></button>
+                <button class="btn text-white py-3 text-end"><a href="product.html">查看更多</a></button>
             </div>
         </div>
     </section>

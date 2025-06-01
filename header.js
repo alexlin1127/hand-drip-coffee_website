@@ -14,7 +14,7 @@ const headerHTML = `
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav ms-auto">
                 <li class="nav-item px-1">
-                    <a class="nav-link" id="homePage" href="">首頁</a>
+                    <a class="nav-link" id="homePage" href="index.html" target="_self">首頁</a>
                 </li>
                 <li class="nav-item px-1">
                     <a class="nav-link" href="news.html" target="_self">最新消息</a>
