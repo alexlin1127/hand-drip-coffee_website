@@ -9,7 +9,7 @@
         <link
             href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css"
             rel="stylesheet" />
-        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="style.css" />
         <style>
             :root {
                 --coffee-dark: #3c2415;
@@ -22,7 +22,6 @@
             }
 
             body {
-                font-family: "Microsoft JhengHei", Arial, sans-serif;
                 background-color: var(--cream);
                 color: var(--coffee-dark);
             }
@@ -256,6 +255,21 @@
                 line-height: 1.7;
             }
 
+            .flavor-box {
+                margin-top: auto;
+                padding-top: 15px;
+            }
+
+            .origin-description {
+                flex-grow: 1;
+                margin-bottom: 0;
+            }
+
+            .navbar-nav .header-info {
+                color: #d2691e;
+                font-weight: 500;
+            }
+
             /* Responsive Design */
             @media (max-width: 768px) {
                 .hero-title {
@@ -297,38 +311,44 @@
                 <div class="container">
                     <h2 class="section-title">品牌理念與故事</h2>
                     <div class="row brand-story">
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="story-card text-center">
+                        <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                            <div class="story-card text-center h-100">
                                 <div class="story-icon">
                                     <i class="fas fa-heart"></i>
                                 </div>
-                                <h3 class="story-title">熱情初心</h3>
-                                <p class="story-text">
-                                    DEMENT
-                                    始於對咖啡的純粹熱愛。我們相信每一杯咖啡都承載著農民的辛勤、土地的恩賜，以及品嚐者的期待。這份初心驅使我們不斷追求完美。
-                                </p>
+                                <div class="story-card-body">
+                                    <h3 class="story-title pb-4">熱情初心</h3>
+                                    <p class="story-text">
+                                        DEMENT
+                                        始於對咖啡的純粹熱愛。我們相信每一杯咖啡都承載著農民的辛勤、土地的恩賜，以及品嚐者的期待。這份初心驅使我們不斷追求完美。
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="story-card text-center">
+                        <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                            <div class="story-card text-center h-100">
                                 <div class="story-icon">
                                     <i class="fas fa-gem"></i>
                                 </div>
-                                <h3 class="story-title">品質堅持</h3>
-                                <p class="story-text">
-                                    從豆子的挑選到烘焙的每一個環節，我們都堅持最高標準。專業的杯測師與烘焙師團隊，確保每一批咖啡都能展現其獨特的風味特色。
-                                </p>
+                                <div class="story-card-body">
+                                    <h3 class="story-title pb-4">品質堅持</h3>
+                                    <p class="story-text">
+                                        從豆子的挑選到烘焙的每一個環節，我們都堅持最高標準。專業的杯測師與烘焙師團隊，確保每一批咖啡都能展現其獨特的風味特色。
+                                    </p>
+                                </div>
                             </div>
                         </div>
-                        <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="story-card text-center">
+                        <div class="col-lg-4 col-md-6 mb-4 d-flex">
+                            <div class="story-card text-center h-100">
                                 <div class="story-icon">
                                     <i class="fas fa-users"></i>
                                 </div>
-                                <h3 class="story-title">社群連結</h3>
-                                <p class="story-text">
-                                    咖啡不只是飲品，更是連結人心的橋樑。我們致力於建立一個溫暖的咖啡社群，讓每個人都能在這裡找到屬於自己的咖啡故事。
-                                </p>
+                                <div class="story-card-body">
+                                    <h3 class="story-title pb-4">社群連結</h3>
+                                    <p class="story-text">
+                                        咖啡不只是飲品，更是連結人心的橋樑。我們致力於建立一個溫暖的咖啡社群，讓每個人都能在這裡找到屬於自己的咖啡故事。
+                                    </p>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -341,7 +361,7 @@
                     <h2 class="section-title">咖啡豆的故鄉</h2>
                     <div class="row">
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="origin-card">
+                            <div class="origin-card d-flex flex-column h-100">
                                 <div class="origin-image">
                                     <i class="fas fa-mountain"></i>
                                 </div>
@@ -350,12 +370,14 @@
                                     <p class="origin-description">
                                         來自海拔2000公尺的高山咖啡園，這裡的咖啡豆擁有獨特的花香與果酸，是咖啡愛好者心中的聖地。
                                     </p>
-                                    <div class="origin-highlight">風味特色：花香、柑橘酸質、蜂蜜甜感</div>
+                                    <div class="flavor-box">
+                                        <div class="origin-highlight">風味特色：花香、柑橘酸質、蜂蜜甜感</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="origin-card">
+                            <div class="origin-card d-flex flex-column h-100">
                                 <div class="origin-image">
                                     <i class="fas fa-leaf"></i>
                                 </div>
@@ -364,12 +386,14 @@
                                     <p class="origin-description">
                                         得天獨厚的地理環境造就了哥倫比亞咖啡的均衡口感，溫和的酸質配上豐富的堅果香氣。
                                     </p>
-                                    <div class="origin-highlight">風味特色：堅果香、焦糖甜、溫和酸質</div>
+                                    <div class="flavor-box">
+                                        <div class="origin-highlight">風味特色：堅果香、焦糖甜、溫和酸質</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                         <div class="col-lg-4 col-md-6 mb-4">
-                            <div class="origin-card">
+                            <div class="origin-card d-flex flex-column h-100">
                                 <div class="origin-image">
                                     <i class="fas fa-sun"></i>
                                 </div>
@@ -378,7 +402,9 @@
                                     <p class="origin-description">
                                         火山土壤賦予了瓜地馬拉咖啡豐富的礦物質，創造出層次豐富且回甘悠長的風味體驗。
                                     </p>
-                                    <div class="origin-highlight">風味特色：煙燻味、巧克力、香料香氣</div>
+                                    <div class="flavor-box">
+                                        <div class="origin-highlight">風味特色：煙燻味、巧克力、香料香氣</div>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -458,5 +484,6 @@
         <script src="header.js"></script>
         <script src="style.js"></script>
         <script src="footer.js"></script>
+        <script src="updateCartBadge.js"></script>
     </body>
 </html>
