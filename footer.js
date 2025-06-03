@@ -32,3 +32,8 @@ const footerHTML = `
     `;
 
 document.getElementById("footer-area").innerHTML = footerHTML;
+
+document.getElementById("contact-info").addEventListener("click", (e) => {
+    e.preventDefault();
+    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+});
