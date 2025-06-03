@@ -22,6 +22,34 @@
                 padding: 100px 0px 50px 0px;
                 font-size: 3rem;
             }
+
+            .product.container .title::after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 50%;
+                transform: translateX(-50%);
+                width: 80px;
+                height: 4px;
+                background: linear-gradient(90deg, var(--yellow-accent), var(--coffee-medium));
+                border-radius: 2px;
+            }
+
+            .btn {
+                text-decoration: none;
+                color: #0d6efd;
+                border: 1px solid #0d6efd;
+                border-radius: 10px;
+                padding: 10px 15px;
+            }
+
+            .btn:hover {
+                color: white;
+                font-size: 1rem;
+                font-weight: bold;
+                background-color: #0d6efd;
+                cursor: pointer;
+            }
         </style>
     </head>
 
@@ -31,178 +59,7 @@
         <main class="product container py-5">
             <h2 class="title text-center mb-5">精選手沖咖啡</h2>
 
-            <!-- 第1個品項 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <img src="https://picsum.photos/id/685/600/400" alt="Andes Mist" class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>安地斯晨霧 Andes Mist</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        哥倫比亞
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        中淺焙
-                    </p>
-                    <p>口感柔和、酸甜均衡，帶有柑橘與紅糖的尾韻，如晨霧中甦醒的高原風情。</p>
-                </div>
-            </div>
-
-            <!-- 第2個品項 -->
-            <div class="row align-items-center flex-md-row-reverse mb-5">
-                <div class="col-md-6">
-                    <img
-                        src="https://picsum.photos/id/685/600/400"
-                        alt="Kenyan Dusk"
-                        class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>肯亞黃昏 Kenyan Dusk</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        肯亞
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        中焙
-                    </p>
-                    <p>濃郁莓果香氣與葡萄酒般的質感，帶來層次分明的酸度與甜美的結尾。</p>
-                </div>
-            </div>
-
-            <!-- 第3個品項 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <img
-                        src="https://picsum.photos/id/685/600/400"
-                        alt="Ethiopian Blossom"
-                        class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>衣索比亞花開 Ethiopian Blossom</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        衣索比亞 耶加雪菲
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        淺焙
-                    </p>
-                    <p>清新茉莉與柑橘香氣，如花園中綻放的晨光，適合追求輕盈風味的你。</p>
-                </div>
-            </div>
-
-            <!-- 第4個品項 -->
-            <div class="row align-items-center flex-md-row-reverse mb-5">
-                <div class="col-md-6">
-                    <img
-                        src="https://picsum.photos/id/685/600/400"
-                        alt="Brazilian Warmth"
-                        class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>巴西暖陽 Brazilian Warmth</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        巴西 薩爾瓦多
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        中深焙
-                    </p>
-                    <p>厚實的榛果香與黑巧克力尾韻，為午後帶來陽光般的溫暖擁抱。</p>
-                </div>
-            </div>
-
-            <!-- 第5個品項 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <img
-                        src="https://picsum.photos/id/685/600/400"
-                        alt="Guatemalan Echo"
-                        class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>瓜地馬拉回聲 Guatemalan Echo</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        瓜地馬拉 安提瓜
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        中焙
-                    </p>
-                    <p>滑順口感中帶有焦糖與香料氣息，如山谷中迴盪的細語。</p>
-                </div>
-            </div>
-
-            <!-- 第6個品項 -->
-            <div class="row align-items-center flex-md-row-reverse mb-5">
-                <div class="col-md-6">
-                    <img
-                        src="https://picsum.photos/id/685/600/400"
-                        alt="Yirgacheffe Twilight"
-                        class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>耶加雪菲暮光 Yirgacheffe Twilight</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        衣索比亞 耶加雪菲
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        淺焙
-                    </p>
-                    <p>散發花香與柑橘風味，搭配淡雅果酸，適合靜夜中細品回味。</p>
-                </div>
-            </div>
-
-            <!-- 第7個品項 -->
-            <div class="row align-items-center mb-5">
-                <div class="col-md-6">
-                    <img
-                        src="https://picsum.photos/id/685/600/400"
-                        alt="Panama Breeze"
-                        class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>巴拿馬微風 Panama Breeze</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        巴拿馬 波奎特
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        淺中焙
-                    </p>
-                    <p>帶有熱帶水果與蜂蜜香氣，口感細緻滑順，如微風拂面。</p>
-                </div>
-            </div>
-
-            <!-- 第8個品項 -->
-            <div class="row align-items-center flex-md-row-reverse mb-5">
-                <div class="col-md-6">
-                    <img
-                        src="https://picsum.photos/id/685/600/400"
-                        alt="Sumatran Depth"
-                        class="img-fluid rounded shadow" />
-                </div>
-                <div class="col-md-6">
-                    <h3>蘇門答臘深林 Sumatran Depth</h3>
-                    <p>
-                        <strong>產地：</strong>
-                        印尼 蘇門答臘
-                    </p>
-                    <p>
-                        <strong>烘焙：</strong>
-                        深焙
-                    </p>
-                    <p>濃郁泥土與香草氣息，展現熱帶雨林的野性魅力與深邃風情。</p>
-                </div>
-            </div>
+            <div id="prod-area" class="row align-items-center mb-5 g-3"></div>
         </main>
 
         <footer id="footer-area" class="footer py-4"></footer>
@@ -219,5 +76,8 @@
 
         <script src="header.js"></script>
         <script src="footer.js"></script>
+        <script src="productList.js"></script>
+        <script>
+        </script>
     </body>
 </html>
