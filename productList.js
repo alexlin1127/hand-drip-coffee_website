@@ -92,7 +92,7 @@ document.getElementById("prod-area").innerHTML = products
                         </p>
                         <p class="card-text">${product.description}</p>
                         <div class="d-flex justify-content-between">
-                            <h5>NTD${product.price}</h5>
+                            <h5>NTD$ ${product.price}</h5>
                             <button class="btn " onclick="addToCart(${product.id})">
                                 <i class="fas fa-cart-plus"></i> 加入購物車
                             </button>
@@ -103,3 +103,19 @@ document.getElementById("prod-area").innerHTML = products
             `
     )
     .join("");
+
+// 加入購物車
+function addToCart(productId) {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const product = products.find((p) => p.id === productId);
+
+    cart.push({
+        name: product.name,
+        price: product.price,
+        id: product.id
+    });
+
+    localStorage.setItem("cart", JSON.stringify(cart));
+    updateCartBadge(cart);
+}
+
