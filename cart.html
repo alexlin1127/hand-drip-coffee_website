@@ -16,124 +16,7 @@
             rel="stylesheet" />
 
         <link href="style.css" rel="stylesheet" />
-        <style>
-            .cart-container {
-                padding-top: 100px;
-            }
-
-            body {
-                font-family: Arial, sans-serif;
-                margin: 20px;
-                background-color: #f5f5f5;
-            }
-
-            .container {
-                /* max-width: 100px; */
-                margin: 0 auto;
-                display: flex;
-                gap: 20px;
-            }
-
-            .cart-section {
-                flex: 2;
-                background: white;
-                padding: 20px;
-                border-radius: 5px;
-            }
-
-            .checkout-section {
-                flex: 1;
-                background: white;
-                padding: 20px;
-                border-radius: 5px;
-                height: fit-content;
-            }
-
-            .cart-item {
-                border: 1px solid #ddd;
-                margin-bottom: 15px;
-                padding: 15px;
-                border-radius: 5px;
-            }
-
-            .item-header {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-                margin-bottom: 10px;
-            }
-
-            .item-name {
-                cursor: pointer;
-                flex: 1;
-            }
-
-            .item-name:hover {
-                color: blue;
-            }
-
-            .item-controls {
-                display: flex;
-                justify-content: space-between;
-                align-items: center;
-            }
-
-            .quantity-controls {
-                display: flex;
-                align-items: center;
-                gap: 10px;
-            }
-
-            .quantity-btn {
-                width: 30px;
-                height: 30px;
-                border: 1px solid #ccc;
-                background: white;
-                cursor: pointer;
-            }
-
-            .quantity-btn:hover {
-                background: #f0f0f0;
-            }
-
-            .price {
-                color: red;
-                font-weight: bold;
-            }
-
-            .checkout-btn {
-                width: 60%;
-                padding: 15px;
-                background: red;
-                color: white;
-                border: none;
-                border-radius: 5px;
-                font-size: 16px;
-                cursor: pointer;
-            }
-
-            .checkout-btn:hover {
-                background: darkred;
-            }
-
-            .checkout-btn:disabled {
-                background: #ccc;
-                cursor: not-allowed;
-            }
-
-            .total-row {
-                border-top: 2px solid #ddd;
-                padding-top: 10px;
-                margin-top: 10px;
-                font-weight: bold;
-            }
-
-            @media (max-width: 768px) {
-                .container {
-                    flex-direction: column;
-                }
-            }
-        </style>
+        <link rel="stylesheet" href="cart_style.css">
     </head>
 
     <body>
@@ -142,15 +25,15 @@
         <div class="cart-container vh-100 d-lg-flex justify-content-center">
             <div class="col-12 col-md-6">
                 <section class="cart">
-                    <h2>購物車</h2>
+                    <h2>訂單明細</h2>
                     <div id="cartItemsContainer"></div>
                 </section>
-    
-                <section class="checkout">
-                    <h3>訂單明細</h3>
+                <section class="checkout">  
+                    <button class="removeAllItem" id="removeAllItem" onclick="removeAllItem()">清空購物車</button>
                     <div class="total-row">
-                        訂單金額:
-                        <span class="price" id="totalPrice">$0</span>
+                        消費金額:
+                        <span class="price" id="totalPrice">0</span>
+                        元
                     </div>
                     <br />
                     <button class="checkout-btn" id="checkout-btn" onclick="handleCheckout()">
@@ -180,11 +63,11 @@
         <script src="updateCartBadge.js"></script>
 
         <script>
-            let cart = JSON.parse(localStorage.getItem("cart") || []);
             let cartData = [];
 
             // 整理購物車內品項，將同品項數量加總
             function loadCartData() {
+                let cart = JSON.parse(localStorage.getItem("cart") || []);
                 const productCount = {};
 
                 cart.forEach(item => {
@@ -210,6 +93,20 @@
 
             // 儲存購物車資料
             function saveCartData() {
+                let cart = [];
+                cartData.forEach(item => {
+                    for (let i = 0; i < item.quantity; i++) {
+                        cart.push({
+                            name: item.name,
+                            price: item.price,
+                            id: item.id
+                        })
+                    }
+                })
+                localStorage.setItem("cart", JSON.stringify(cart));
+                if (typeof updateCartBadge === "function") {
+                    updateCartBadge(cart);
+                }
                 console.log("購物車已更新: ", cartData);
             }
 
@@ -227,8 +124,8 @@
                             '<input type="checkbox" ' + (item.selected ? 'checked' : '') + ' onchange="handleItemToggle(' + i + ', this.checked)">' +
                             '<div class="item-name">' + item.name + '</div>' +
                         '</div>' +
-                        '<div style="margin: 10px 0;">' +
-                            '價格: <span class="price">$' + item.price.toLocaleString() + '</span>' +
+                        '<div class="itemPrice">' +
+                            '價格: <span>$' + item.price.toLocaleString() + '</span>' +
                         '</div>' +
                         '<div class="item-controls">' +
                             '<div class="quantity-controls">' +
@@ -237,24 +134,13 @@
                                 '<button class="quantity-btn" onclick="changeQuantity(' + i + ', 1)">+</button>' +
                             '</div>' +
                             '<div>' +
-                                '<button onclick="handleFavorite()" style="margin-right: 10px;">追蹤</button>' +
-                                '<button onclick="removeItem(' + i + ')" style="color: red;">刪除</button>' +
+                                '<button class="delete-btn" onclick="removeItem(' + i + ')">刪除</button>' +
                             '</div>' +
                         '</div>';
                     container.appendChild(div);
                 }
 
             }
-
-
-            // function handleSelectAll(checked) {
-            //     for (let i = 0; i < cartData.length; i++) {
-            //         cartData[i].selected = checked;
-            //     }
-            //     renderCartItems();
-            //     updateTotal();
-            //     saveCartData();
-            // }
 
             // 處理單項選擇
             function handleItemToggle(index, checked) {
@@ -299,11 +185,12 @@
                     }
                 }
 
-                document.getElementById("totalPrice").textContent = "$" + totalAmount.toLocaleString();
+                document.getElementById("totalPrice").textContent = totalAmount.toLocaleString();
                 document.getElementById("itemCount").textContent = totalQuantity;
                 document.getElementById("checkout-btn").disabled = (totalQuantity === 0);
             }
 
+            // 點選結帳按鈕後的顯示畫面，包含購買多少產品及總金額
             function handleCheckout() {
                 let totalAmount = 0;
                 let totalQuantity = 0;
@@ -318,6 +205,15 @@
 
                 if (totalQuantity > 0) {
                     alert("準備結帳\n總共 " + totalQuantity + " 件商品\n金額：$" + totalAmount.toLocaleString());
+                }
+            }
+            function removeAllItem() {
+                localStorage.setItem('cart', JSON.stringify([])); // 設為空陣列
+                cartData = [];
+                renderCartItems();
+                updateTotal();
+                if (typeof updateCartBadge === "function") {
+                    updateCartBadge([]);
                 }
             }
 
