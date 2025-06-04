@@ -4,7 +4,7 @@ const desktop_productHTML = `
         <div class="container">
             <div class="row">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="display-4 mb-0">精選商品</h2>
+                    <h2 class="display-4 mb-0 section-title">精選商品</h2>
                 </div>
             </div>
 
@@ -16,7 +16,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-cup-hot"></i>
+                                        <i class="bi bi-cloud-fog2"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">安地斯晨霧</h5>
@@ -31,7 +31,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-cup-straw"></i>
+                                        <i class="bi bi-sunset"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">肯亞黃昏</h5>
@@ -46,7 +46,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-droplet"></i>
+                                        <i class="bi bi-flower1"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">衣索比亞花開</h5>
@@ -61,7 +61,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-droplet"></i>
+                                        <i class="bi bi-sun"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">巴西暖陽</h5>
@@ -79,7 +79,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-snow"></i>
+                                        <i class="bi bi-soundwave"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">瓜地馬拉回聲</h5>
@@ -94,7 +94,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-heart"></i>
+                                        <i class="bi bi-moon-stars"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">耶加雪菲暮光</h5>
@@ -109,7 +109,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-wind"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">巴拿馬微風</h5>
@@ -124,7 +124,7 @@ const desktop_productHTML = `
                             <div class="col-md-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
-                                        <i class="bi bi-star"></i>
+                                        <i class="bi bi-tree-fill"></i>
                                     </div>
                                     <div class="card-body">
                                         <h5 class="card-title">蘇門答臘深林</h5>
@@ -165,7 +165,7 @@ const desktop_productHTML = `
 function updateProductArea() {
     const product_page = document.getElementById("products");
 
-    if (window.innerWidth > 992) {
+    if (window.innerWidth > 768) {
         product_page.outerHTML = desktop_productHTML;
     } else {
         product_page.outerHTML = mobile_productHTML;
