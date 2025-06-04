@@ -1,5 +1,5 @@
 .cart-container {
-    padding-top: 100px;
+    padding: 100px 0px 50px 0px;
 }
 
 body {
@@ -109,7 +109,7 @@ body {
     font-weight: bold;
     font-size: 2rem;
     text-align: end;
-    padding: 40px 0px;
+    padding: 40px 0px 10px 0px;
 }
 
 .delete-btn {
@@ -138,11 +138,17 @@ body {
     font-size: 3rem;
 }
 
-.removeAllItem {
+.removeAllItem,
+.selectAllItem {
     padding: 5px;
-    border: 2px solid rgb(219, 186, 153);
+    border: 2px solid rgba(113, 110, 107, 0.3);
+    border-radius: 5px;
     display: flex;
     justify-content: flex-end;
+}
+
+.selectAllItem {
+    margin-right: 10px;
 }
 
 @media (max-width: 768px) {
