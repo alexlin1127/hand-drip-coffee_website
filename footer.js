@@ -1,4 +1,4 @@
-const footerHTML = `
+const footer = `
     <div class="container text-center">
         <div class="row justify-content-center">
             <!-- 地址 -->
@@ -31,7 +31,48 @@ const footerHTML = `
     </div>
     `;
 
-document.getElementById("footer-area").innerHTML = footerHTML;
+const footer_mobile = 
+    `
+    <div class="container text-center contact">
+        <div class="row justify-content-center">
+            <!-- 地址 -->
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-geo-alt display-6 text-primary-custom py-3"></i>
+                </div>
+                <h5>台北市大安區咖啡街123號</h5>
+            </div>
+
+            <!-- 聯絡電話 -->
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-telephone display-6 text-primary-custom py-3"></i>
+                </div>
+                <h5>(02) 1234-5678</h5>
+            </div>
+
+            <!-- 營業時間 -->
+            <div class="col-md-4 d-flex align-items-center">
+                <div class="d-flex align-items-center gap-3">
+                    <i class="bi bi-clock display-6 text-primary-custom py-3"></i>
+                </div>
+                <h5>週一至週日 07:00 - 22:00</h5>
+            </div>
+        </div>
+    </div>
+    `;
+
+function footer_update() {
+    if (window.innerWidth >= 768) {
+        document.getElementById("footer-area").innerHTML = footer;
+    } else {
+        document.getElementById("footer-area").innerHTML = footer_mobile;
+    }
+    
+}
+
+window.addEventListener("resize", footer_update);
+window.addEventListener("DOMContentLoaded", footer_update);
 
 document.getElementById("contact-info").addEventListener("click", (e) => {
     e.preventDefault();
