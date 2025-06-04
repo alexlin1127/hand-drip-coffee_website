@@ -9,26 +9,6 @@ body {
     height: 100vh;
 }
 
-.welcome-page {
-    height: 100%;
-    background: linear-gradient(rgb(76, 75, 75, 0.7), rgba(76, 75, 75, 0.1), rgba(76, 75, 75, 0.6)),
-                url("https://picsum.photos/id/684/600/400");
-    background-size: cover;
-    background-position: center;
-    color: white;
-    position: relative;
-}
-
-/* .welcome-page.d-none {
-    display: none;
-} */
-
-/* .welcome-header {
-    position: absolute;
-    top: 20px;
-    left: 20px;
-} */
-
 .logo-circle {
     width: 40px;
     height: 40px;
@@ -36,33 +16,6 @@ body {
     border-radius: 50%;
     color: white;
     font-size: 1.2rem;
-}
-
-.welcome-content h1 {
-    font-size: 4rem;
-    font-weight: 300;
-    line-height: 1.2;
-}
-
-.welcome-content p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 600px;
-}
-
-.btn-read-more {
-    background: var(--primary-color);
-    border: none;
-    padding: 15px 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-    transition: all 0.3s ease;
-}
-
-.btn-read-more:hover {
-    background: var(--secondary-color);
-    transform: translateY(-2px);
 }
 
 .hero-section a {
@@ -75,13 +28,8 @@ body {
     height: 100%;
 }
 
-/* .main-site.active {
-    display: block;
-    height: 100%;
-} */
-
 .navbar-custom {
-    background: rgba(0, 0, 0, 0.9);
+    background: #222;
     backdrop-filter: blur(10px);
     transition: all 0.3s ease;
 }
@@ -203,6 +151,7 @@ body {
 }
 
 .footer {
+    width: 100vw;
     background: #222;
     color: white;
 }
