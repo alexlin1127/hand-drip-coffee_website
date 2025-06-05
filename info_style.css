@@ -1,0 +1,255 @@
+:root {
+    --coffee-dark: #3c2415;
+    --coffee-medium: #8b4513;
+    --coffee-light: #d2b48c;
+    --yellow-accent: #f4d03f;
+    --yellow-light: #fcf3cf;
+    --white: #ffffff;
+    --cream: #fff8dc;
+}
+
+body {
+    background-color: var(--cream);
+    color: var(--coffee-dark);
+}
+
+.brand-story {
+    padding-top: 30px;
+}
+/* Hero Section, */
+.hero-section {
+    background: linear-gradient(135deg, var(--coffee-medium) 0%, var(--coffee-dark) 100%);
+    color: var(--white);
+    padding: 125px 0;
+    position: relative;
+    overflow: hidden;
+    height: 56vh;
+}
+
+.hero-section::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><circle cx="50" cy="50" r="2" fill="rgba(244,208,63,0.1)"/></svg>')
+        repeat;
+    opacity: 0.3;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-title {
+    font-size: 3.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+    font-size: 1.3rem;
+    opacity: 0.9;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 15px;
+}
+
+/* Section Styling */
+.content-section {
+    padding: 50px 0;
+}
+
+/* Brand Story Section */
+.brand-story {
+    background: var(--white);
+}
+
+.story-card {
+    background: var(--yellow-light);
+    border-radius: 20px;
+    padding: 2.5rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 10px 30px rgba(60, 36, 21, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(60, 36, 21, 0.15);
+}
+
+.story-icon {
+    font-size: 3rem;
+    color: var(--coffee-medium);
+    margin-bottom: 1.5rem;
+}
+
+.story-title {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--coffee-dark);
+    margin-bottom: 1rem;
+}
+
+.story-text {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: var(--coffee-dark);
+}
+
+/* Coffee Origin Section */
+.coffee-origin {
+    background: linear-gradient(135deg, var(--coffee-light) 0%, var(--yellow-light) 100%);
+}
+
+.origin-card {
+    background: var(--white);
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 10px 25px rgba(60, 36, 21, 0.1);
+    transition: transform 0.3s ease;
+    height: 100%;
+}
+
+.origin-card:hover {
+    transform: translateY(-8px);
+}
+
+.origin-image {
+    width: 100%;
+    height: 250px;
+    background: linear-gradient(45deg, var(--coffee-medium), var(--coffee-light));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 4rem;
+    color: var(--white);
+}
+
+.origin-content {
+    padding: 2rem;
+}
+
+.origin-title {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--coffee-dark);
+    margin-bottom: 1rem;
+}
+
+.origin-description {
+    color: var(--coffee-dark);
+    line-height: 1.6;
+    margin-bottom: 1rem;
+}
+
+.origin-highlight {
+    background: var(--yellow-light);
+    padding: 0.8rem 1.2rem;
+    border-radius: 8px;
+    border-left: 4px solid var(--yellow-accent);
+    font-weight: 500;
+}
+
+/* Sustainability Section */
+.sustainability {
+    background: var(--white);
+}
+
+.sustainability-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.sustainability-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--cream);
+    border-radius: 15px;
+    border: 3px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.sustainability-item:hover {
+    border-color: var(--yellow-accent);
+    transform: translateY(-5px);
+}
+
+.sustainability-icon {
+    font-size: 3.5rem;
+    color: var(--coffee-medium);
+    margin-bottom: 1.5rem;
+}
+
+.sustainability-title {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--coffee-dark);
+    margin-bottom: 1rem;
+}
+
+.sustainability-text {
+    color: var(--coffee-dark);
+    line-height: 1.6;
+}
+
+/* Values Section */
+.values-section {
+    background: var(--coffee-dark);
+    color: var(--white);
+    text-align: center;
+    padding: 60px 0;
+}
+
+.values-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    color: var(--yellow-accent);
+}
+
+.values-text {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+.flavor-box {
+    margin-top: auto;
+    padding-top: 15px;
+}
+
+.origin-description {
+    flex-grow: 1;
+    margin-bottom: 0;
+}
+
+.navbar-nav .header-info {
+    color: #d2691e;
+    font-weight: 500;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .story-card {
+        padding: 1.5rem;
+    }
+
+    .content-section {
+        padding: 50px 0;
+    }
+}
