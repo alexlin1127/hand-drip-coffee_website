@@ -4,7 +4,7 @@ const header = `
             <div class="logo-circle d-flex justify-content-center align-items-center me-3">
                 <i class="bi bi-cup-hot"></i>
             </div>
-            dement
+            LWX
         </a>
 
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -45,7 +45,7 @@ const header_mobile =
             <div class="logo-circle d-flex justify-content-center align-items-center me-3">
                 <i class="bi bi-cup-hot"></i>
             </div>
-            dement
+            LWX
         </a>
         <div class="row position-relative item-container">
             <a class="cart-icon" style="position: absolute; top: 5px; left:-50px; width:auto"href="cart.html" target="_self" title="購物車">
