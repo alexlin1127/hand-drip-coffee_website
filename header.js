@@ -105,4 +105,3 @@ function header_update() {
 window.addEventListener('resize', header_update);
 window.addEventListener('DOMContentLoaded', header_update);
 
-document.getElementById('contact-info').addEventListener('click', window_scroll);

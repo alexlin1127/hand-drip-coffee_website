@@ -73,8 +73,3 @@ function footer_update() {
 
 window.addEventListener("resize", footer_update);
 window.addEventListener("DOMContentLoaded", footer_update);
-
-document.getElementById("contact-info").addEventListener("click", (e) => {
-    e.preventDefault();
-    window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
-});

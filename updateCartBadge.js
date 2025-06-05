@@ -8,5 +8,7 @@ function updateCartBadge(cart) {
 }
 
 // 頁面刷新時，保留購物車內資料
-let cart = JSON.parse(localStorage.getItem("cart")) || [];
-updateCartBadge(cart);
+window.onload = () => {
+    let cart = JSON.parse(localStorage.getItem("cart")) || [];
+    updateCartBadge(cart);
+};
