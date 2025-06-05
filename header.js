@@ -48,8 +48,8 @@ const header_mobile =
             LWX
         </a>
         <div class="row position-relative item-container">
-            <a class="cart-icon" style="position: absolute; top: 5px; left:-50px; width:auto"href="cart.html" target="_self" title="購物車">
-                    <i class="bi bi-cart3"></i>
+            <a class="cart-icon" style="position: absolute; top: 3px; left:-65px; width:auto"href="cart.html" target="_self" title="購物車">
+                    <i class="bi bi-cart3" style="font-size: 1.3rem;"></i>
                     <span id="cart-badge" class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger" style="display:none; font-size:0.7rem;">0</span>
             </a>
             <button class="navbar-toggler d-flex flex-column" style="border: 2px solid #d2691e; margin-right: 30px" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">

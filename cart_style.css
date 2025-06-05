@@ -49,7 +49,7 @@ body {
 }
 
 .item-name:hover {
-    color: blue;
+    color: #0d6efd;
 }
 
 .item-controls {
@@ -73,7 +73,7 @@ body {
 }
 
 .quantity-btn:hover {
-    background: #f0f0f0;
+    background: #8a8989;
 }
 
 .price {
@@ -123,6 +123,11 @@ body {
 
 .itemPrice {
     margin: 20px 0px;
+    font-size: 1.2rem;
+}
+
+.item-title {
+    font-size: 1.2rem;
 }
 
 .cart > h2 {
@@ -144,7 +149,17 @@ body {
     border-radius: 5px;
     display: flex;
     justify-content: flex-end;
+    margin: 5px;
 }
+
+.removeAllItem:hover,
+.selectAllItem:hover {
+    color: #fff;
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+.quantity-btn
 
 .selectAllItem {
     margin-right: 10px;

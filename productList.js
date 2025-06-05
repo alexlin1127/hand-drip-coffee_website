@@ -13,7 +13,7 @@ fetch("product.json")
                                 <i class="${product.img}"></i>
                             </div>
                             <div class="card-body">
-                                <h4 class="card-title">${product.name}</h4>
+                                <h4 class="card-title"><strong>${product.name}</strong></h4>
                                 <p class="card-text">
                                     <strong>產地：</strong>
                                     ${product.madePlace}

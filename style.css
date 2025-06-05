@@ -52,7 +52,6 @@ body {
     color: var(--primary-color);
 }
 
-.member-icon,
 .cart-icon {
     padding-left: 10px;
     padding-right: 10px;
@@ -61,7 +60,7 @@ body {
 }
 
 .hero-section {
-    height: 80vh;
+    height: 75vh;
     background: linear-gradient(rgba(101, 85, 85, 0.6), rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.4)),
         url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%23DEB887" width="1200" height="600"/><ellipse fill="%234A4A4A" cx="600" cy="300" rx="400" ry="200" opacity="0.2"/></svg>');
     background-size: cover;
@@ -112,6 +111,7 @@ body {
 
 .news-card {
     border: none;
+    padding-bottom: 30px;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
 }
@@ -163,8 +163,8 @@ body {
 }
 
 .news {
-    height: 100%;
     padding-top: 150px;
+    padding-bottom: 50px;
 }
 
 .mailinput {

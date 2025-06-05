@@ -56,8 +56,8 @@ function renderCartItems() {
         div.className = "cart-item";
         div.innerHTML =
             '<div class="item-header">' + 
-                '<input class="item-check" type="checkbox" ' +(item.selected ? "checked" : "") + ' onchange="handleItemToggle(' + i + ', this.checked)">' +
-                '<div class="item-name">' + item.name + "</div>" + 
+                '<input id=prod-' + (i+1) +' class="item-check" type="checkbox" ' + (item.selected ? "checked" : "") + ' onchange="handleItemToggle(' + i + ', this.checked)">' +
+                '<label for=' + '"prod-' +  (i+1) + '" class="item-name">' +'<strong class="item-title">'+ item.name + '</strong>'+'</label>' +  
             "</div>" +
             '<div class="itemPrice">' + "價格: <span>$" + item.price.toLocaleString() + "</span>" +
             "</div>" +
