@@ -13,7 +13,7 @@ const desktop_productHTML = `
                     <div class="carousel-item active">
                         <div class="row g-4">
                             <!-- product1 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-cloud-fog2"></i>
@@ -28,7 +28,7 @@ const desktop_productHTML = `
                             </div>
 
                             <!-- product2 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-sunset"></i>
@@ -43,7 +43,7 @@ const desktop_productHTML = `
                             </div>
 
                             <!-- product3 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-flower1"></i>
@@ -58,7 +58,7 @@ const desktop_productHTML = `
                             </div>
                             
                             <!-- product4 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-sun"></i>
@@ -76,7 +76,7 @@ const desktop_productHTML = `
                     <div class="carousel-item">
                         <div class="row g-4">
                             <!-- product5 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-soundwave"></i>
@@ -91,7 +91,7 @@ const desktop_productHTML = `
                             </div>
 
                             <!-- product6 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-moon-stars"></i>
@@ -106,7 +106,7 @@ const desktop_productHTML = `
                             </div>
 
                             <!-- product7 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-wind"></i>
@@ -121,7 +121,7 @@ const desktop_productHTML = `
                             </div>
                             
                             <!-- product8 -->
-                            <div class="col-md-3">
+                            <div class="col-12 col-md-4 col-lg-3">
                                 <div class="card product-card h-100">
                                     <div class="product-image d-flex justify-content-center align-items-center">
                                         <i class="bi bi-tree-fill"></i>

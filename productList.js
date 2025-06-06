@@ -7,7 +7,7 @@ fetch("product.json")
         document.getElementById("prod-area").innerHTML = 
         products.map(product => 
                     `
-                    <div class="col-md-4 d-flex">
+                    <div class="col-12 col-md-6 col-lg-4 d-flex">
                         <div class="card flex-fill">
                             <div class="product-image d-flex justify-content-center align-items-center">
                                 <i class="${product.img}"></i>
