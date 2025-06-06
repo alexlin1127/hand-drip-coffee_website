@@ -63,7 +63,7 @@ const footer_mobile =
     `;
 
 function footer_update() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 992) {
         document.getElementById("footer-area").innerHTML = footer;
     } else {
         document.getElementById("footer-area").innerHTML = footer_mobile;

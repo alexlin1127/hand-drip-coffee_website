@@ -90,7 +90,7 @@ function window_scroll(e) {
 }
 
 function header_update() {
-    if (window.innerWidth >= 768) {
+    if (window.innerWidth >= 992) {
         document.getElementById("head-area").innerHTML = header;
     } else {
         document.getElementById("head-area").innerHTML = header_mobile;

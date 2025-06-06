@@ -165,7 +165,7 @@ const desktop_productHTML = `
 function updateProductArea() {
     const product_page = document.getElementById("products");
 
-    if (window.innerWidth > 768) {
+    if (window.innerWidth > 992) {
         product_page.outerHTML = desktop_productHTML;
     } else {
         product_page.outerHTML = mobile_productHTML;
